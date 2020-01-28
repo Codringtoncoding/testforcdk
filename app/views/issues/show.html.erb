@@ -1,0 +1,14 @@
+<h1><%= @issue.number %></h1>
+<h2>
+  <%= pluralize @issue.comments.size, "comment" %>
+</h2>
+
+<div id="comments">
+  <% if @issue.comments.blank? %>
+    leave a comment for the case <%= @issue.number %>
+  <% else %>
+    <% @issue.comments.each do |comment| %>
+      <%= render 'comments/show', comment: comment %>
+    <% end %>
+  <% end %>
+</div>

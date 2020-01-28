@@ -11,7 +11,7 @@ Issue.create!({
   number: "00234542"
 })
 
-Issue.create!
-  ({number: "00234543"
+Issue.create!({
+  number: "00234543"
 })
 puts 'finished!'
